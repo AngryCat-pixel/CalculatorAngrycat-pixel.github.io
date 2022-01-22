@@ -21,8 +21,8 @@ const buttons = {
 };
 const screen = document.querySelector(".screen > p");
 for (let btnName in buttons) {
+  console.log(btnName);
   buttons[btnName].node.addEventListener("click", (event) => {
-    console.log(btnName);
     if ("operation" in buttons[btnName]) {
       render(buttons[btnName].operation);
     } else if (btnName === "equal") {
